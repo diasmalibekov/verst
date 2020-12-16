@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
     padding: 0;
     margin: 0;
@@ -20,14 +21,22 @@ ul, li {
     display: block;
     margin: 0;
     padding: 0;
+=======
+/*fonts:
+font-family: 'Lato', sans-serif;
+*/
+* {
+    box-sizing: border-box;
+>>>>>>> Stashed changes
 }
 
-.container {
-    width: 1170px;
-    margin: 0 auto; /*позиционирование по центру*/
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
 }
 
 .header {
+<<<<<<< Updated upstream
     background: url('../img/header-bg.jpg')  no-repeat center top / cover;
     padding-top: 57px;
     padding-bottom: 322px;
@@ -145,3 +154,16 @@ section h3 {
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     transform: scale(1.05);
 }
+=======
+    background: #000;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #102746;
+}
+>>>>>>> Stashed changes
