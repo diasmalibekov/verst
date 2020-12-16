@@ -6,6 +6,10 @@ body {
     font-size: 16px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -24,9 +28,9 @@ ul, li {
 }
 
 .header {
-    background: url('../img/header-bg.jpg')
-        center top / cover no-repeat;
+    background: url('../img/header-bg.jpg')  no-repeat center top / cover;
     padding-top: 57px;
+    padding-bottom: 322px;
 }
 .header a {
     color: #fff;
@@ -60,4 +64,84 @@ ul, li {
 
 .logo {
     margin-right: 69px;
+}
+
+.offer {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.offer p {
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    margin-top: 216px;
+}
+
+.offer h1 {
+    font-size: 100px;
+    margin-top: -9px;
+    margin-bottom: 19px;
+    letter-spacing: 0.02em;
+}
+
+.btn {
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: solid #fff 1px;
+    text-align: center;
+    display: block;
+    padding: 17px 23px;
+    width: 238px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+section {
+    padding-top: 113px;
+}
+
+section h2 {
+    font-size: 50px;
+    margin-bottom: 58px;
+}
+
+section h3 {
+    font-size: 25px;
+    margin-bottom: 32px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc-left, .desc-right {
+    width: 564px;
+}
+
+.description p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.62em;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 67px;
+}
+
+.gallery img {
+    transition: all 0.5s ease;
+}
+
+.gallery img:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: scale(1.05);
 }
