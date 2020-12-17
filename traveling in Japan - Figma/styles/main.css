@@ -807,13 +807,15 @@ img {
 
 .top__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 57px;
+    grid-row-gap: 57px;
 }
 
 .top__card {
     display: flex;
     flex-direction: column;
+    grid-column: span 2;
 
 }
 
@@ -890,8 +892,8 @@ img {
 }
 
 .video__wrapper {
-    width: 1440px;
-    margin: 0 auto;
+    max-width: 1440px;
+    margin: 0;
     position: relative;
 }
 
@@ -1058,5 +1060,42 @@ img {
      grid-column: span 6;
      width: 100%;
      object-fit: cover;
+    }
+    
+    .places__card-pic_small {
+      object-fit: cover;
+    }
+    
+    .tours__tour {
+      grid-column-gap: 32px;
+    }
+    
+    .tour__info {
+      padding: 0;
+    }
+    
+    .tour__title {
+      margin-bottom: 16px;
+    }
+    
+    .tour__desc {
+      margin-bottom: 16px;
+    }
+    
+    .top__cards {
+      grid-column-gap: 25px;
+      grid-row-gap: 55px;
+    }
+    
+    .top__card {
+      grid-column: span 3;
+    }
+    
+    .top__card-pic {
+      margin-bottom: 25px;
+    }
+    
+    .footer {
+      padding: 60px 0;
     }
 }
