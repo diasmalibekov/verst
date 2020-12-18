@@ -1171,7 +1171,15 @@ media 767px*/
     .places__card-pic_small {
         height: 230px;
     }
-
+    
+    .places__view-all {
+        margin-bottom: 25px;
+    }
+    
+    .places__caption {
+        margin-bottom: 0;
+    }
+    
     .tours {
         margin-bottom: 76px;
     }
@@ -1199,6 +1207,10 @@ media 767px*/
     .top__card {
         grid-column: span 6;
     }
+    
+    .top__card-stats {
+        max-width: 386px;
+    }
 
     .top__card-desc {
         margin-bottom: 15px;
@@ -1211,10 +1223,12 @@ media 767px*/
 
     .footer__nav {
         width: 100%;
+        justify-content: space-between;
     }
 
     .footer__menu {
         width: 50%;
+        margin: 0;
         margin-bottom: 24px;
     }
 }
