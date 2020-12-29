@@ -304,8 +304,11 @@
 
 <!-- MODALS -->
 
-<div class="modal">
+<div class="modal" style="display:none"> <!-- FIRST MODAL STARTS -->
     <div class="modal__dialog">
+        <button class="modal__close" type="button">
+            <img src="img/close.svg" width="34" height="34" alt="">
+        </button>
         <div class="modal-work">
             <div class="modal-work__preview">
                 <img class="modal-work__photo"src="https://placehold.it/790x780" alt="">
@@ -319,10 +322,45 @@
                     <div class="modal-work__client-title">Client:</div>
                     <div class="modal-work__client-company">Creative Agency</div>
                 </div>
-                <div class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ip</div>
+                <div class="modal-work__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci.
+                </div>
+                <div class="modal-work__footer">
+                    <button class="modal-work__btn" type="button">
+                    <img src="img/left-arrow.svg" height="11" alt="">
+                    Previous
+                    </button>
+                    <button class="modal-work__btn" type="button">
+                    Next
+                    <img src="img/right-arrow.svg" height="11" alt="">
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</div> <!-- FIRST MODAL ENDS -->
+
+<div class="modal"> <!-- SECOND MODAL STARTS -->
+    <div class="modal__dialog">
+        <button class="modal__close" type="button">
+            <img src="img/close.svg" width="34" height="34" alt="">
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title">Resume</h3>
+            <div class="text-center">
+                <a class="btn btn-thin" href="#!">Download PDF</a>
+                <a class="btn btn-thin" href="#!">Print</a>
+            </div>
+            <div class="timeline">
+                <div class="timeline__col timeline__col--left">
+                    <h4 class="timeline__title">EXPERIENCE</h4>
+                </div>
+                <div class="timeline__col timeline__col--right">
+                    <h4 class="timeline__title">EDUCATION</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- SECOND MODAL ENDS -->
 </body>
 </html>
