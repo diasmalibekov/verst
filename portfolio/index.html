@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <meta name='viewport' content='width=device-width, initial scale=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 </head>
-<body class="no-scroll">
+<body>
 
 <header class="header">
     <div class="container">
@@ -24,13 +25,17 @@
                     <div class="user__prof">UI &amp; UX Designer</div>
                 </div>
             </div>
-            <nav class="nav">
+            <nav class="nav" id='nav'>
                 <a href="#!" class='nav__link'>work</a>
                 <a href="#!" class='nav__link'>about me</a>
                 <a href="#!" class='nav__link'>blog</a>
                 <a href="#!" class='nav__link'>contact</a>
-                <a href="#!" class='nav__link nav__link--btn'>hire me</a>
+                <a href="#!" class='nav__link nav__link--btn' data-modal='#modal_hire_me'>hire me</a>
             </nav>
+
+            <button type="button" class="burger" id='navToggle'>
+                <img class='burger__icon' src="img/menu.svg" alt="">
+            </button>
         </div>
     </div>
 </header>
@@ -64,8 +69,8 @@
                     </a>
                 </div>
 
-                <a class='btn' href="#!">HIRE ME</a>
-                <button class='btn' type='button'>SEE MY RESUME</button>
+                <a class='btn' href="#!" data-modal='#modal_hire_me'>HIRE ME</a>
+                <button class='btn' type='button' data-modal='#modal_resume'>SEE MY RESUME</button>
             </div>
 
             <img src="img/designer_photo@1X.png" alt="designer photo" class="intro__photo">
@@ -77,17 +82,17 @@
 <div class="works"> <!-- works start -->
     <div class="container">
         <div class="works__nav">
-            <a href="" class="works__nav-link">All</a>
-            <a href="" class="works__nav-link">App</a>
-            <a href="" class="works__nav-link">Websites</a>
-            <a href="" class="works__nav-link">Interaction</a>
+            <a href="#!" class="works__nav-link" data-filter="all">All</a>
+            <a href="#!" class="works__nav-link" data-filter="app">App</a>
+            <a href="#!" class="works__nav-link" data-filter="website">Websites</a>
+            <a href="#!" class="works__nav-link" data-filter="interaction">Interaction</a>
         </div>
         <div class="portfolio">
-            <div class="portfolio__col">
-                <div class="work">
+            <div class="portfolio__col" data-cat="app">
+                <div class="work" data-modal='#modal_project_1'>
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: app</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -95,11 +100,11 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col">
+            <div class="portfolio__col" data-cat="website">
                 <div class="work">
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: website</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -107,11 +112,11 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col">
+            <div class="portfolio__col" data-cat="interaction">
                 <div class="work">
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: interaction</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -119,11 +124,11 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col">
+            <div class="portfolio__col" data-cat="website">
                 <div class="work">
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: website</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -131,11 +136,11 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col">
+            <div class="portfolio__col" data-cat="interaction">
                 <div class="work">
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: interaction</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -143,11 +148,11 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col">
+            <div class="portfolio__col" data-cat="app">
                 <div class="work">
                     <img src="https://placehold.it/370x300" alt="" class="work__image">
                     <div class="work__content">
-                        <div class="work__cat">category</div>
+                        <div class="work__cat">category: app</div>
                         <div class="work__title">
                             project title
                             <div class="work__date">2020</div>
@@ -173,8 +178,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. </p>
                 </div>
-                <a class='btn' href="#!">HIRE ME</a>
-                <button class='btn' type='button'>SEE MY RESUME</button>
+                <a class='btn' href="#!" data-modal='#modal_hire_me'>HIRE ME</a>
+                <button class='btn' type='button' data-modal='#modal_resume'>SEE MY RESUME</button>
             </div>
         </div>
     </div>
@@ -296,7 +301,7 @@
                 <a href="#!" class="footer__nav-link">About Me</a>
                 <a href="#!" class="footer__nav-link">Blog</a>
                 <a href="#!" class="footer__nav-link">Contact</a>
-                <a href="#!" class="footer__nav-link footer__nav-link--btn">Hire me</a>
+                <a href="#!" class="footer__nav-link footer__nav-link--btn" data-modal='#modal_hire_me'>Hire me</a>
             </div>
         </div>
     </div>
@@ -304,14 +309,21 @@
 
 <!-- MODALS -->
 
-<div class="modal" style="display:none"> <!-- FIRST MODAL STARTS -->
+<div class="modal" id='modal_project_1'> <!-- FIRST MODAL STARTS -->
     <div class="modal__dialog">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="img/close.svg" width="34" height="34" alt="">
         </button>
         <div class="modal-work">
             <div class="modal-work__preview">
-                <img class="modal-work__photo"src="https://placehold.it/790x780" alt="">
+               <div id="worksSlider">
+                   <div>
+                       <img class="modal-work__photo"src="https://placehold.it/790x780" alt="">
+                    </div>
+                    <div>
+                        <img class="modal-work__photo"src="https://placehold.it/790x780/333" alt="">
+                    </div>
+                </div>
             </div>
             <div class="modal-work__content">
                 <div class="modal-work__header">
@@ -326,11 +338,11 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci.
                 </div>
                 <div class="modal-work__footer">
-                    <button class="modal-work__btn" type="button">
+                    <button class="modal-work__btn slickPrev" type="button">
                     <img src="img/left-arrow.svg" height="11" alt="">
                     Previous
                     </button>
-                    <button class="modal-work__btn" type="button">
+                    <button class="modal-work__btn slickNext" type="button">
                     Next
                     <img src="img/right-arrow.svg" height="11" alt="">
                     </button>
@@ -340,13 +352,13 @@
     </div>
 </div> <!-- FIRST MODAL ENDS -->
 
-<div class="modal"> <!-- SECOND MODAL STARTS -->
+<div class="modal" id='modal_resume'> <!-- SECOND MODAL STARTS -->
     <div class="modal__dialog">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="img/close.svg" width="34" height="34" alt="">
         </button>
         <div class="modal__content">
-            <h3 class="modal__title">Resume</h3>
+            <h3 class="modal__title text-center">Resume</h3>
             <div class="text-center">
                 <a class="btn btn--thin" href="#!">Download PDF</a>
                 <a class="btn btn--thin" href="#!">Print</a>
@@ -362,13 +374,128 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
                         </div>
                     </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2017 - <b>Present</b></div>
+                        <h5 class="timeline__subtitle">Freelancer</h5>
+                        <div class="timeline__position">Art Director</div>
+                        <div class="timeline__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2017 - <b>Present</b></div>
+                        <h5 class="timeline__subtitle">Freelancer</h5>
+                        <div class="timeline__position">Art Director</div>
+                        <div class="timeline__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="timeline__col timeline__col--right">
                     <h4 class="timeline__title">EDUCATION</h4>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2005 - 2010</div>
+                        <h5 class="timeline__subtitle">UI/UX Design</h5>
+                        <div class="timeline__position">LA University, USA</div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2002 - 2005</div>
+                        <h5 class="timeline__subtitle">UI/UX Design</h5>
+                        <div class="timeline__position">LA Collage of Art, USA</div>
+                    </div>
+                    <h4 class="timeline__title">SKILLS</h4>
+                    <div class="progress-bar">
+                       <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">UI/UX Design</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">Illustrator</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">Photoshop</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="timeline__title">AWARDS</h4>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2010</div>
+                        <h5 class="timeline__subtitle">UI/UX Design</h5>
+                        <div class="timeline__position">LA Collage of Art, USA</div>
+                        <div class="timeline__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                        </div>
+                    </div>
                 </div>
             </div> <!-- timeline ends -->
+            <div class="text-center"><a href="#!" class="btn" data-modal='#modal_hire_me'>Hire me</a></div>
+
         </div>
     </div>
 </div> <!-- SECOND MODAL ENDS -->
+
+<div class="modal" id='modal_hire_me'> <!-- THIRD MODAL STARTS -->
+    <div class="modal__dialog modal__dialog--sm">
+        <button class="modal__close" type="button" data-close>
+            <img src="img/close.svg" width="34" height="34" alt="">
+        </button>
+        <div class="contact">
+            <div class="contact__left">
+                <h3 class="modal__title mb-0">Let's talk</h3>
+                <h4 class="modal__subtitle">CALL ME OR SEND ME A REQUEST</h4>
+                <ul class="contact__info">
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="img/phone-call.svg" width="15" height="12" alt="">
+                        (200) 100 3000
+                    </li>
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="img/mail.svg" width="15" height="12" alt="">
+                        designer@ui43.com
+                    </li>
+                </ul>
+
+                <form class='form' action="/" method="post">
+                    <div class="form__group">
+                        <label for="input-email" class="form__label">Adress e-mail</label>
+                        <input class="form__input" type="text" id="input-email" placeholder="Adress e-mail" name="input-email">
+                    </div>
+                    <div class="form__group">
+                        <label for="input-text" class="form__label">Request</label>
+                        <textarea name="input-text" id="input-text" class="form__textarea" placeholder="Type your request..."></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn" type="submit">SEND</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact__right">
+
+            </div>
+        </div>
+    </div>
+</div> <!-- THIRD MODAL ENDS -->
+
+<!-- JS -->
+<script src='script/slick.min.js'></script>
+<script src='script/app.js'></script>
 </body>
 </html>
