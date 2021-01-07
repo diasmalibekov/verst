@@ -1,0 +1,49 @@
+.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 195px;
+    grid-column-gap: 1.3rem;
+}
+
+.stories__item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba($black, .2);
+    cursor: pointer;
+}
+
+.stories__preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.stories__title {
+    width: 100%;
+    padding: 1.4rem;
+
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: $white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.stories__date {
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    color: $white;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
