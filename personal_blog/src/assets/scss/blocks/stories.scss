@@ -3,6 +3,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 195px;
     grid-column-gap: 1.3rem;
+
+    margin-bottom: 3rem;
 }
 
 .stories__item {
@@ -11,6 +13,13 @@
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba($black, .2);
     cursor: pointer;
+
+    &:hover {
+        .stories__preview {
+            transform: scale(1.3);
+            transition-duration: 3s;
+        }
+    }
 }
 
 .stories__preview {
@@ -21,6 +30,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    transition: transform 1s ease-in-out;
 }
 
 .stories__title {
