@@ -11,12 +11,24 @@ body {
     font-size: 1.4rem;
     color: $white;
     line-height: 1.5;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 /* BLOCKS */
@@ -35,3 +47,12 @@ body {
 @import 'blocks/stories';
 @import 'blocks/add-post';
 @import 'blocks/post';
+@import 'blocks/embed';
+@import 'blocks/pagination';
+@import 'blocks/related';
+@import 'blocks/comments';
+@import 'blocks/form';
+@import 'blocks/work';
+@import 'blocks/tags';
+@import 'blocks/cabinet';
+@import 'blocks/modal';
