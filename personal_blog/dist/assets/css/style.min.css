@@ -370,6 +370,9 @@ a {
   left: 0;
   top: 0;
   z-index: 1000; }
+  @media (max-width: 991px) {
+    .sidebar {
+      display: none; } }
 
 .sidebar__header {
   height: 18rem;
@@ -1053,7 +1056,7 @@ a {
 
 .modal {
   padding: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
