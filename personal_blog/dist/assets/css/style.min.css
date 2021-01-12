@@ -370,7 +370,7 @@ a {
   left: 0;
   top: 0;
   z-index: 1000; }
-  @media (max-width: 991px) {
+  @media screen and (max-width: 991px) {
     .sidebar {
       display: none; } }
 
@@ -394,6 +394,9 @@ a {
 
 .main {
   padding: 10rem 0 8rem 300px; }
+  @media screen and (max-width: 991px) {
+    .main {
+      padding-left: 0; } }
 
 .header {
   display: flex;
@@ -404,20 +407,33 @@ a {
   top: 0;
   right: 0;
   z-index: 1000; }
+  @media screen and (max-width: 991px) {
+    .header {
+      width: 100%; } }
 
 .header__left {
   width: 60%; }
+  @media screen and (max-width: 991px) {
+    .header__left {
+      width: 40%; } }
 
 .header__right {
   width: 40%;
   display: flex;
   justify-content: flex-end; }
+  @media screen and (max-width: 991px) {
+    .header__right {
+      width: 60%; } }
 
 .container {
   max-width: 700px;
   margin: 0 auto;
   padding-left: 5rem;
   padding-right: 5rem; }
+  @media screen and (max-width: 700px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
 
 .profile__avatar {
   position: relative;
@@ -487,6 +503,10 @@ a {
     border-radius: 0.41em; }
   .btn--sm {
     padding: 0.7em 1.25em; }
+
+@media screen and (max-width: 991px) {
+  .nav {
+    display: none; } }
 
 .nav__list {
   display: flex; }
@@ -620,8 +640,9 @@ a {
 
 .add-post__textarea {
   display: block;
-  width: 75%;
+  flex-grow: 1;
   height: 26px;
+  overflow: hidden;
   border: none;
   background-color: transparent;
   resize: none;
@@ -632,7 +653,8 @@ a {
     color: #D2D2D2; }
 
 .add-post__form-actions {
-  width: 25%;
+  width: 120px;
+  flex-shrink: 0;
   display: flex;
   justify-content: flex-end; }
 
