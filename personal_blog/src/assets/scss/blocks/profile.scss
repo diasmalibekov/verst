@@ -1,3 +1,11 @@
+.profile {
+    margin-top: -5rem;
+
+    @include breakpoint($tablet-bp) {
+        margin-top: -3.25rem;
+    }
+}
+
 .profile__avatar {
     position: relative;
     display: block;
@@ -8,6 +16,13 @@
     border-radius: 50%;
     box-shadow: 0 7px 20px rgba(0, 0, 0, .25);
     margin-bottom: 1.9rem;
+
+    @include breakpoint($tablet-bp) {
+        width: 6.5rem;
+        height: 6.5rem;
+
+        margin-left: 0;
+    }
 }
 
 .profile__name {
