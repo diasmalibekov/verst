@@ -16,6 +16,12 @@ body {
     &.no-scroll {
         overflow: hidden;
     }
+
+    @include breakpoint($tablet-bp) {
+        &.show-sidebar {
+            overflow: hidden;
+        }
+    }
 }
 
 *,
