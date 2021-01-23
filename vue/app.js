@@ -1,7 +1,22 @@
 const App = {
     data() {
         return {
-            counter: 0
+            myPlaceholder: 'Введите название заметки',
+            title: 'Список заметок',
+            inputValue: '',
+            notes: ['note 1', 'note 2']
+        }
+    },
+    methods: {
+        inputChangeHandler(event) {
+            this.inputValue = event.target.value
+        },
+        addNewNote() {
+            this.notes.push(this.inputValue)
+            this.inputValue = ''
+        },
+        deleteNote(idx, event) {
+            this.notes.splice(idx, 1)
         }
     }
 }
