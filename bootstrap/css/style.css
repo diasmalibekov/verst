@@ -1,0 +1,2 @@
+#box {transition: width 1s linear;}
+#box:hover {width: 50px}
