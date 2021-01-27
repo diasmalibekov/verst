@@ -38,7 +38,10 @@ let {src, dest} = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
     imagemin = require('gulp-imagemin'),
-    webp = require('gulp-webp')
+    webp = require('gulp-webp'),
+    webpHtml = require('gulp-webp-html'),
+    webpCss = require('gulp-webpcss'),
+    svgSprite = require('gulp-svg-sprite')
 
 function browserSyncFunc() {
     browserSync.init({
@@ -53,6 +56,7 @@ function browserSyncFunc() {
 function html() {
     return src(path.src.html)
         .pipe(fileInclude())
+        .pipe(webpHtml())
         .pipe(dest(path.build.html))
         .pipe(browserSync.stream())
 }
@@ -73,6 +77,7 @@ function css() {
                 cascade: true,
             })
         )
+        .pipe(webpCss())
         .pipe(dest(path.build.css))
         .pipe(cleanCss())
         .pipe(
@@ -118,6 +123,21 @@ function images() {
         .pipe(dest(path.build.img))
         .pipe(browserSync.stream())
 }
+
+gulp.task('svgSprite', function() {
+    return gulp.src([sourceFolder + '/iconsprite/*.svg'])
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: '../icons/icons.svg',
+//                    exaple: true
+                }
+            }
+        })
+        )
+        .pipe(dest(path.build.img))
+
+})
 
 function watchFiles() {
     gulp.watch([path.watch.html], html)
