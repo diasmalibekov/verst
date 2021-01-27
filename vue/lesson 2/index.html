@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <title>Vue basics</title>
     <link rel="stylesheet" href="theme.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<div class="container" id="app">
+<div class="container" id="app" v-cloak>
     <div class="card center">
-        <h1>{{title}}</h1>
-
+        <div v-html="myHtml"></div>
+<!--
+        <h2 v-text="title"></h2>
+        <h2 v-once>{{title}}</h2>
+        <button class="btn" @click="title = 'once checked'">Title change</button>
     </div>
-</div>
+-->
+        <div class="form-control">
+            <input type="text"
+            @keyup.enter="addItem()"
+            ref="myInput">
+        </div>
+        <ul class="list" v-if="items.length">
+            <li class="list-item"
+            v-for="(item, i) of items"
+            @click="items.splice(i, 1)"
+            :key="item">{{item}}&nbsp;
+            <input type="text" @click.stop></li>
+        </ul>
+        <div v-show="items.length === 0">There's no list items</div>
+<!--
+        <ul class="list">
+            <li class="list-item" v-for="(value, key) in person">
+                {{key}} - {{value}}
+            </li>
+        </ul>
+-->
+    </div>
 
 <script src="https://unpkg.com/vue@next"></script>
 <script src="app.js"></script>
