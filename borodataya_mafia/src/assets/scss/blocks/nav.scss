@@ -8,6 +8,12 @@
 .nav__item {
     position: relative;
     margin: 0 1.5rem;
+
+    &:hover {
+        >.subnav {
+            display: block;
+        }
+    }
 }
 
 .nav__link {

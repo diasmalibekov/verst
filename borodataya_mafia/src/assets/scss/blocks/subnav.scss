@@ -1,9 +1,11 @@
 .subnav {
     position: absolute;
+    display: none;
+
     top: 100%;
     left: 0;
 
-    width: 16.5rem;
+    width: 18rem;
 }
 
 .subnav__link {
@@ -15,4 +17,16 @@
     font-weight: 500;
     color: black;
     text-decoration: none;
+
+    padding-left: 1.5rem;
+    background: url('../images/svg/location.png') -.2rem .7rem no-repeat;
+    background-size: 15px;
+
+    transition: all .2s linear;
+
+    &:hover {
+        background: url('../images/svg/location.png') -.2rem .3rem no-repeat;
+        background-size: 15px;
+        opacity: .7;
+    }
 }

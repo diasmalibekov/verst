@@ -377,6 +377,8 @@ body {
 .nav__item {
   position: relative;
   margin: 0 1.5rem; }
+  .nav__item:hover > .subnav {
+    display: block; }
 
 .nav__link {
   display: inline-block;
@@ -405,9 +407,10 @@ body {
 
 .subnav {
   position: absolute;
+  display: none;
   top: 100%;
   left: 0;
-  width: 16.5rem; }
+  width: 18rem; }
 
 .subnav__link {
   display: block;
@@ -416,4 +419,12 @@ body {
   padding-top: .5rem;
   font-weight: 500;
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-left: 1.5rem;
+  background: url("../images/svg/location.png") -0.2rem 0.7rem no-repeat;
+  background-size: 15px;
+  transition: all .2s linear; }
+  .subnav__link:hover {
+    background: url("../images/svg/location.png") -0.2rem 0.3rem no-repeat;
+    background-size: 15px;
+    opacity: .7; }
