@@ -1,3 +1,12 @@
+.center {
+  text-align: center; }
+
+.end {
+  text-align: end; }
+
+.i-center {
+  align-content: center; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -331,7 +340,8 @@ body {
   background-color: white;
   font-size: 1.4rem;
   font-family: -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  color: black;
+  color: #FFF;
+  text-shadow: 1px 1px 1px black;
   line-height: 1.5; }
 
 *,
@@ -360,13 +370,10 @@ body {
   background-color: transparent; }
 
 .header__logo-link {
-  color: black;
+  color: #FFF;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }
-
-.main {
-  padding-top: 10rem; }
 
 .nav__list {
   display: flex;
@@ -384,14 +391,14 @@ body {
   display: inline-block;
   font-size: 1.4rem;
   text-decoration: none;
-  color: black;
+  color: #FFF;
   text-transform: uppercase;
   font-weight: 700; }
   .nav__link:after {
     content: '';
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #FFF;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -402,7 +409,7 @@ body {
   .nav__link.has_subnav {
     position: relative;
     padding-right: 2rem;
-    background: url(../images/svg/down-arrow.png) no-repeat 100% center;
+    background: url(../images/svg/pin.png) no-repeat 100% center;
     background-size: 10px; }
 
 .subnav {
@@ -418,7 +425,7 @@ body {
   font-size: 1.3rem;
   padding-top: .5rem;
   font-weight: 500;
-  color: black;
+  color: #FFF;
   text-decoration: none;
   padding-left: 1.5rem;
   background: url("../images/svg/location.png") -0.2rem 0.7rem no-repeat;
@@ -428,3 +435,49 @@ body {
     background: url("../images/svg/location.png") -0.2rem 0.3rem no-repeat;
     background-size: 15px;
     opacity: .7; }
+
+.intro {
+  min-height: 100vh;
+  padding-top: 16rem;
+  font-family: 'roboto';
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../images/mafia-11.jpg) no-repeat center/cover; }
+
+.intro__title {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: .9;
+  padding-right: 5rem;
+  text-transform: uppercase; }
+
+.intro__subtitle {
+  margin-bottom: 11rem;
+  padding-right: 5rem;
+  font-weight: 500;
+  font-size: 3rem;
+  text-transform: uppercase; }
+
+.intro__desc {
+  margin: 0 auto;
+  margin-bottom: 12rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: .9;
+  max-width: 60rem; }
+
+.page {
+  overflow: hidden; }
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  text-shadow: none;
+  border-radius: .7em;
+  padding: 1em 2em;
+  background-color: #e67e22; }
+  .btn:hover, .btn:focus {
+    background-color: #cd6d17; }

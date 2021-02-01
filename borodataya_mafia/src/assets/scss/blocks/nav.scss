@@ -21,7 +21,7 @@
     font-size: 1.4rem;
 
     text-decoration: none;
-    color: black;
+    color: $secondary;
     text-transform: uppercase;
     font-weight: 700;
     &:after {
@@ -29,7 +29,7 @@
         width: 0;
         height: 2px;
 
-        background-color: black;
+        background-color: $secondary;
         position: absolute;
         bottom: -5px;
         left: 0;
@@ -46,7 +46,7 @@
     &.has_subnav {
         position: relative;
         padding-right: 2rem;
-        background: url(../images/svg/down-arrow.png) no-repeat 100% center;
+        background: url(../images/svg/pin.png) no-repeat 100% center;
         background-size: 10px;
     }
 }

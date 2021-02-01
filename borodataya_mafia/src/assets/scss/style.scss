@@ -1,4 +1,4 @@
-@import 'vars';
+@import '_vars';
 @import 'vendor/reset';
 
 
@@ -12,7 +12,8 @@ body {
     font-size: 1.4rem;
     font-family: -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
-    color: black;
+    color: $secondary;
+    text-shadow: 1px 1px 1px black;
     line-height: 1.5;
 }
 
@@ -29,3 +30,6 @@ body {
 @import 'blocks/main';
 @import 'blocks/nav';
 @import 'blocks/subnav';
+@import 'blocks/intro';
+@import 'blocks/page';
+@import 'blocks/btn';
