@@ -71,12 +71,15 @@ document.body.appendChild(app.view)
 //_______________________________
 
 
-PIXI.loader
-    .add('images.firstAtlas.json')
-    .load(setup)
+//PIXI.loader
+//    .add('images.firstAtlas.json')
+//    .load(setup)
+//
+//function setup() {
+//    id = resources['images/firstAtlas.json'].textures
+//    unicorn = new Sprite(id['unicorn.png'])
+//    app.stage.addChild(unicorn)
+//}
 
-function setup() {
-    id = resources['images/firstAtlas.json'].textures
-    unicorn = new Sprite(id['unicorn.png'])
-    app.stage.addChild(unicorn)
-}
+let unicorn = Sprite.from('images/unicorn.png')
+app.stage.addChild(unicorn)
