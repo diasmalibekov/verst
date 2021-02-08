@@ -72,6 +72,7 @@
 //_______________________________
 
 
+<<<<<<< HEAD
 //PIXI.Loader.shared.add('images/firstAtlas.json').load(setup)
 //
 //function setup() {
@@ -158,3 +159,17 @@
 //triangle.x = 180
 //triangle.y = 22
 //app.stage.addChild(triangle)
+=======
+//PIXI.loader
+//    .add('images.firstAtlas.json')
+//    .load(setup)
+//
+//function setup() {
+//    id = resources['images/firstAtlas.json'].textures
+//    unicorn = new Sprite(id['unicorn.png'])
+//    app.stage.addChild(unicorn)
+//}
+
+let unicorn = Sprite.from('images/unicorn.png')
+app.stage.addChild(unicorn)
+>>>>>>> 414540fd34ecddefb7c9c8f044bf425a4762a10b
